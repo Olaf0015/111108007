@@ -64,13 +64,12 @@ high_corr_values = high_corr_values.drop('Transported')
 high_corr_values
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import mean_absolute_error
-
 X = train[high_corr_values]
 y = train['Transported']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 from sklearn.ensemble import HistGradientBoostingClassifier
+from sklearn.metrics import mean_absolute_error
 from sklearn.metrics import confusion_matrix, accuracy_score, recall_score, precision_score
 hgbc = HistGradientBoostingClassifier()
 hgbc.fit(X_train,y_train)
