@@ -3,13 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# import dataest
 train = pd.read_csv("data/train.csv")
 test = pd.read_csv("data/test.csv")
 train.head(10)
 train.info
 train.info()
-
 
 total = train.isnull().sum().sort_values(ascending=False)
 percent = (train.isnull().sum()/train.isnull().count()).sort_values(ascending=False)
