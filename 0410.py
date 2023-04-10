@@ -6,7 +6,6 @@ import seaborn as sns
 train = pd.read_csv("data/train.csv")
 test = pd.read_csv("data/test.csv")
 train.head(10)
-train.info
 train.info()
 
 total = train.isnull().sum().sort_values(ascending=False)
